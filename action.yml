@@ -6,10 +6,10 @@ branding:
 inputs:
   fpm_opts:
     description: 'Options passed to the fpm cli tool'
-    required: true
+    required: false
   fpm_args:
     description: 'Arguments passed to the fpm cli tool'
-    required: true
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'

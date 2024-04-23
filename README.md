@@ -17,12 +17,15 @@ jobs:
     - name: Package
       uses: bpicode/github-action-fpm@master
       with:
-        fpm_args: './build'
+        fpm_args: 'file=/usr/local/bin/file'
         fpm_opts: '--debug -n mypackage -t deb -s dir'
 ```
 ## Inputs and Outputs
 
-See [action.yml](action.yml).
+| argument | required | description                                                    |
+| :------- | :------: | :------------------------------------------------------------- |
+| fpm_args | no       | Arguments to pass to the fpm command (e.g. file=/usr/bin/file) |
+| fpm_opts | no       | Options to pass to the fpm command (e.g. --verbose)            |
 
 ## Feedback, Suggestions, Contributions, Known Limitations
 

@@ -1,4 +1,5 @@
 FROM ruby:3-alpine
+ENV FPM_VERSION=1.15.1
 LABEL "maintainer"="bpicode"
 
 LABEL "com.github.actions.name"="github-action-fpm"
@@ -10,7 +11,7 @@ RUN apk --no-cache add build-base
 RUN apk --no-cache add rpm
 RUN apk --no-cache add tar
 RUN apk --no-cache add zip
-RUN gem install --no-document fpm -v 1.15.1
+RUN gem install --no-document fpm -v ${FPM_VERSION}
 
 COPY entrypoint.sh /entrypoint.sh
 
